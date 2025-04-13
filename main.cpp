@@ -8,11 +8,11 @@ using namespace std::chrono;
 // Constant for array size
 const int SIZE = 5000;
 
-vector<int> generateReverseSortedArray(int size) {
+vector<int> generateSortedArray(int size) {
     vector<int> arr(size);
-    // Fill array in reverse-sorted order (e.g., 5000, 4999, ..., 1)
+    // Fill array in sorted order (e.g., 1, 2, ..., 5000)
     for (int i = 0; i < size; i++) {
-        arr[i] = size - i;
+        arr[i] = i + 1;
     }
     return arr;
 }
@@ -72,7 +72,7 @@ void quickSort(vector<int>& arr, int low, int high) {
 
 int main() {
     // Generate random array
-    vector<int> original = generateReverseSortedArray(SIZE);
+    vector<int> original = generateSortedArray(SIZE);
     // Create copies for sorting
     vector<int> arr1 = original;
     vector<int> arr2 = original;
