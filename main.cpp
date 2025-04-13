@@ -6,19 +6,13 @@ using namespace std;
 using namespace std::chrono;
 
 // Constant for array size
-const int SIZE = 1000;
+const int SIZE = 5000;
 
-// Function to generate a random array of specified size
-vector<int> generateRandomArray(int size) {
+vector<int> generateReverseSortedArray(int size) {
     vector<int> arr(size);
-    // Seed random number generator
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> dis(1, 10000);
-
-    // Fill array with random numbers
+    // Fill array in reverse-sorted order (e.g., 5000, 4999, ..., 1)
     for (int i = 0; i < size; i++) {
-        arr[i] = dis(gen);
+        arr[i] = size - i;
     }
     return arr;
 }
@@ -78,7 +72,7 @@ void quickSort(vector<int>& arr, int low, int high) {
 
 int main() {
     // Generate random array
-    vector<int> original = generateRandomArray(SIZE);
+    vector<int> original = generateReverseSortedArray(SIZE);
     // Create copies for sorting
     vector<int> arr1 = original;
     vector<int> arr2 = original;
