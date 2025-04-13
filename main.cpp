@@ -6,7 +6,7 @@ using namespace std;
 using namespace std::chrono;
 
 // Constant for array size
-const int SIZE = 50000;
+const int SIZE = 5000;
 
 // Function to generate a reverse-sorted array of specified size
 vector<int> generateReverseSortedArray(int size) {
