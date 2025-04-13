@@ -6,7 +6,7 @@ using namespace std;
 using namespace std::chrono;
 
 // Constant for array size
-const int SIZE = 50000;
+const int SIZE = 100000;
 
 vector<int> generateRandomArray(int size) {
     vector<int> arr(size);
