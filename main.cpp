@@ -6,11 +6,10 @@ using namespace std;
 using namespace std::chrono;
 
 // Constant for array size
-const int SIZE = 5000;
+const int SIZE = 10000;
 
 vector<int> generateSortedArray(int size) {
     vector<int> arr(size);
-    // Fill array in sorted order (e.g., 1, 2, ..., 5000)
     for (int i = 0; i < size; i++) {
         arr[i] = i + 1;
     }
